@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
      * The {@link ViewPager} that will host the section contents.
      */
     private ViewPager viewPager;
-    private ListView listView;
+    //private ListView listView;
     private TabLayout tabLayout;
     private AppBarLayout appBarLayout;
     private Toolbar toolbar;
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         ViewPagerAdapter adapter=new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.AddFragment(new thongtinhs_fragment(), "LỚP");
+        adapter.AddFragment(new lop_fragment(), "LỚP");
         adapter.AddFragment(new dshs_fragment(),"HỌC SINH");
 
         viewPager.setAdapter(adapter);

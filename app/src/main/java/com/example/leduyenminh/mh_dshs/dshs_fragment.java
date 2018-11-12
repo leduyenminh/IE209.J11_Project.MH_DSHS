@@ -27,7 +27,7 @@ public class dshs_fragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         lsthocsinh = new ArrayList<>();
-        //lsthocsinh.add(new hocsinh("","","","","",0,0,0,0));
+        //lsthocsinh.add(new hocsinh("","","","","","","",0,0,0,0));
         lsthocsinh.add(new hocsinh("10001","Phạm Thành An","10a1","Nam","P.Linh Đông, Q.Thủ Đức, TPHCM", "12-03-1997","anpt@gmai.com",R.drawable.if_male3_403019,R.drawable.masculine,R.drawable.calendar,R.drawable.placeholder));
         lsthocsinh.add(new hocsinh("10002","Lại Văn Cử","10a2","Nam","P.Linh Trung, Q.Thủ Đức, TPHCM", "20-03-1997","laivancu@gmail.com",R.drawable.if_male3_403019,R.drawable.masculine,R.drawable.calendar,R.drawable.placeholder));
         lsthocsinh.add(new hocsinh("10003","Nguyễn Như Quỳnh","10a3","Nữ","P.Bình Chiểu, Q.Thủ Đức, TPHCM", "12-09-1997","quynhnn@gmai.com",R.drawable.if_female1_403023,R.drawable.femenine,R.drawable.calendar,R.drawable.placeholder));

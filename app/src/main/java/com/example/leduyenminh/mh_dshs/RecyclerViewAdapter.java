@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -22,6 +23,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     Context mContext;
     List<hocsinh> mData;
     Dialog myDialog;
+
     public RecyclerViewAdapter(Context mContext, List<hocsinh> mData) {
         this.mContext = mContext;
         this.mData = mData;
@@ -41,7 +43,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
 
 
-        viewHolder.iv_avatar.setOnClickListener(new View.OnClickListener() {
+        viewHolder.item_dshs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 ImageView img_hs1=(ImageView)myDialog.findViewById(R.id.img_hs1);
@@ -59,6 +61,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 btn_gioitinh.setText(mData.get(viewHolder.getAdapterPosition()).getGioitinh());
                 btn_diachi.setText(mData.get(viewHolder.getAdapterPosition()).getDiachi());
                 btn_email.setText(mData.get(viewHolder.getAdapterPosition()).getEmail());
+                myDialog.show();
             }
         });
         return viewHolder;
@@ -72,7 +75,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         myViewHolder.tv_gioitinh.setText(mData.get(i).getGioitinh());
         myViewHolder.tv_diachi.setText(mData.get(i).getDiachi());
         myViewHolder.iv_gioitinh.setImageResource(mData.get(i).getIc_gioitinh());
-        myViewHolder.iv_avatar.setImageResource(mData.get(i).getAvatar());
+        myViewHolder.ib_avatar.setImageResource(mData.get(i).getAvatar());
 
     }
 
@@ -89,7 +92,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         private TextView tv_ngaysinh;
 
 
-        private ImageView iv_avatar;
+        private ImageButton ib_avatar;
         private ImageView iv_gioitinh;
         private ImageView iv_diachi;
         private ImageView iv_ngaysinh;
@@ -104,7 +107,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             tv_diachi=(TextView)itemView.findViewById(R.id.txt_diachi);
             tv_gioitinh=(TextView)itemView.findViewById(R.id.txt_gioitinh);
             tv_ngaysinh=(TextView)itemView.findViewById(R.id.txt_ngaysinh);
-            iv_avatar=(ImageView)itemView.findViewById(R.id.img_hs);
+            ib_avatar=(ImageButton)itemView.findViewById(R.id.img_hs);
             iv_gioitinh=(ImageView)itemView.findViewById(R.id.img_gioitinh);
             iv_diachi=(ImageView)itemView.findViewById(R.id.img_diachi);
             iv_ngaysinh=(ImageView)itemView.findViewById(R.id.img_ngaysinh);
